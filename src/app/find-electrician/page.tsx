@@ -1,3 +1,5 @@
+'use client';
+
 import { electricians, serviceCategories } from "@/lib/data";
 import { ElectricianFinder } from "./electrician-finder";
 
