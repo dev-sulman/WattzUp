@@ -2,12 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowRight,
+  Quote,
 } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { serviceCategories, whyHireUsItems } from '@/lib/data';
+import { serviceCategories, whyHireUsItems, howItWorksSteps, testimonials } from '@/lib/data';
 
 export default function Home() {
   const heroImage = PlaceHolderImages.find((img) => img.id === 'hero-electrician');
@@ -93,6 +94,56 @@ export default function Home() {
                   <p className="mt-1 text-muted-foreground">{item.description}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold !font-headline">How It Works</h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              A simple, transparent process to solve your electrical needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            {howItWorksSteps.map((step) => (
+              <div key={step.step} className="flex flex-col items-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-4 relative">
+                  <step.icon className="h-8 w-8" />
+                  <div className="absolute -top-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-sm">
+                    {step.step}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" className="py-16 md:py-24 bg-secondary/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold !font-headline">What Our Clients Say</h2>
+            <p className="mt-2 text-lg text-muted-foreground">
+              Real stories from satisfied customers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="flex flex-col justify-between">
+                <CardHeader>
+                  <Quote className="h-8 w-8 text-primary/50 mb-4" />
+                  <CardDescription className="text-foreground text-base">"{testimonial.quote}"</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="font-semibold">{testimonial.author}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

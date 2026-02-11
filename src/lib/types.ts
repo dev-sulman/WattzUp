@@ -40,3 +40,16 @@ export interface WhyHireUsItem {
   description: string;
   icon: LucideIcon;
 }
+
+export interface HowItWorksStep {
+  step: number;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}
+
+export interface Testimonial {
+  quote: string;
+  author: string;
+  location: string;
+}

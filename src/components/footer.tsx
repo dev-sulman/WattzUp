@@ -10,7 +10,7 @@ export function Footer() {
             <span className="font-bold !font-headline">WattzUp</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} WattzUp. All Rights Reserved.
+            © {new Date().getFullYear()}  nova tech stdio llc. All Rights Reserved.
           </p>
         </div>
       </div>

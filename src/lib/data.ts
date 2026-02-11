@@ -10,8 +10,12 @@ import {
   Award,
   BarChart,
   Leaf,
+  ClipboardList,
+  Wrench,
+  CalendarCheck,
+  Smile,
 } from 'lucide-react';
-import type { ServiceCategory, PriceEstimate, WhyHireUsItem, Electrician } from './types';
+import type { ServiceCategory, PriceEstimate, WhyHireUsItem, Electrician, HowItWorksStep, Testimonial } from './types';
 
 export const serviceCategories: ServiceCategory[] = [
   {
@@ -194,4 +198,49 @@ export const electricians: Electrician[] = [
     { id: '6', name: 'Industrial Powerhouse', location: 'Detroit, MI', rating: 4.6, reviews: 180, services: ['industrial'] },
     { id: '7', name: 'Home Safe Electric', location: 'Philadelphia, PA', rating: 4.8, reviews: 302, services: ['residential'] },
     { id: '8', name: '24/7 Emergency Electric', location: 'New York, NY', rating: 4.9, reviews: 450, services: ['emergency'] },
+];
+
+export const howItWorksSteps: HowItWorksStep[] = [
+  {
+    step: 1,
+    title: 'Describe Your Need',
+    description: "Browse our services or use our estimator to understand your needs. Then, find a local professional.",
+    icon: ClipboardList,
+  },
+  {
+    step: 2,
+    title: 'Schedule a Visit',
+    description: 'Connect with a certified electrician and schedule a visit at a time that is convenient for you.',
+    icon: CalendarCheck,
+  },
+  {
+    step: 3,
+    title: 'Get the Job Done',
+    description: 'Your chosen professional will arrive on time and complete the job to the highest safety and quality standards.',
+    icon: Wrench,
+  },
+  {
+    step: 4,
+    title: 'Relax with Confidence',
+    description: 'Enjoy peace of mind knowing your electrical system is safe, reliable, and backed by our quality guarantee.',
+    icon: Smile,
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    quote: "The electrician was on time, very professional, and fixed our wiring issue in under an hour. I couldn't be happier with the service!",
+    author: 'Sarah J.',
+    location: 'New York, NY',
+  },
+  {
+    quote: "WattzUp connected us with an amazing commercial electrician for our new office setup. The whole process was seamless. Highly recommended!",
+    author: 'David L.',
+    location: 'Los Angeles, CA',
+  },
+  {
+    quote: "I had an emergency power outage at night. The 24/7 service is a lifesaver. A friendly electrician arrived quickly and restored power.",
+    author: 'Maria G.',
+    location: 'Chicago, IL',
+  },
 ];
