@@ -81,7 +81,7 @@ export default function Home() {
               Ensure safety, reliability, and peace of mind.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyHireUsItems.map((item) => (
               <div key={item.title} className="flex items-start space-x-4">
                 <div className="flex-shrink-0">

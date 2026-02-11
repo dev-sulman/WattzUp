@@ -14,6 +14,8 @@ import {
   Wrench,
   CalendarCheck,
   Smile,
+  Search,
+  BrainCircuit,
 } from 'lucide-react';
 import type { ServiceCategory, PriceEstimate, WhyHireUsItem, Electrician, HowItWorksStep, Testimonial } from './types';
 
@@ -187,6 +189,16 @@ export const whyHireUsItems: WhyHireUsItem[] = [
         description: 'Our work is insured and warrantied, giving you complete peace of mind.',
         icon: Zap,
     },
+    {
+        title: 'Troubleshooting Skills',
+        description: 'Professionals can quickly diagnose and fix even the most complex electrical problems.',
+        icon: Search,
+    },
+    {
+        title: 'Up-to-Date Knowledge',
+        description: 'Our electricians are current with the latest electrical codes, technologies, and best practices.',
+        icon: BrainCircuit,
+    },
 ];
 
 export const electricians: Electrician[] = [
@@ -242,5 +254,15 @@ export const testimonials: Testimonial[] = [
     quote: "I had an emergency power outage at night. The 24/7 service is a lifesaver. A friendly electrician arrived quickly and restored power.",
     author: 'Maria G.',
     location: 'Chicago, IL',
+  },
+  {
+    quote: "The team installed a new EV charger for me. They were clean, efficient, and explained everything clearly. Fantastic job!",
+    author: 'Mike T.',
+    location: 'Phoenix, AZ',
+  },
+  {
+    quote: "I needed a full rewiring for my old house. WattzUp found the perfect contractor who did an incredible job on a complex project.",
+    author: 'Emily R.',
+    location: 'Houston, TX',
   },
 ];
